@@ -1,0 +1,24 @@
+package org.example;
+
+import java.util.Comparator;
+
+/**
+ * This class helps to compare the results of 2 athletes.
+ */
+public class TimeComparator implements Comparator<AthleteResult> {
+
+    @Override
+    public int compare(AthleteResult athlete1, AthleteResult athlete2) {
+        String[] parts1 = athlete1.getFinalResults().split(":");
+        String[] parts2 = athlete2.getFinalResults().split(":");
+        int minutes1 = Integer.parseInt(parts1[0]);
+        int seconds1 = Integer.parseInt(parts1[1]);
+        int minutes2 = Integer.parseInt(parts2[0]);
+        int seconds2 = Integer.parseInt(parts2[1]);
+        if (minutes1 != minutes2) {
+            return Integer.compare(minutes1, minutes2);
+        } else {
+            return Integer.compare(seconds1, seconds2);
+        }
+    }
+}
