@@ -3,7 +3,7 @@ package org.example;
 import java.util.List;
 
 public class AthleteResult {
-    Integer athleteNumber;
+    int athleteNumber;
     String athleteName;
     String countryCode;
     String skiTimeResult;
