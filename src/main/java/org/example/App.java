@@ -14,7 +14,7 @@ import java.util.List;
  */
 public class App {
     public static void main(String[] args) {
-        String csvFile = "path/to/your/file.csv";
+        String csvFile = "C:\\Users\\Vali\\Desktop\\AthleteResults.csv";
         String line;
         String csvSplitBy = ",";
         List<AthleteResult> athletes = new ArrayList<>();
@@ -36,8 +36,10 @@ public class App {
             e.printStackTrace();
         }
 
-        Collections.sort(athletes, new TimeComparator());
-
+        athletes.sort(new TimeComparator());
+        System.out.println("Winner - " + athletes.get(0));
+        System.out.println("Runner-up - " + athletes.get(1));
+        System.out.println("Third Place - " + athletes.get(2));
 
     }
 }

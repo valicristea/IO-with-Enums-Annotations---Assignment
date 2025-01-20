@@ -6,8 +6,8 @@ public class TimeComparator implements Comparator <AthleteResult> {
 
     @Override
     public int compare(AthleteResult athlete1, AthleteResult athlete2) {
-        String [] parts1 = athlete1.skiTimeResult.split(":");
-        String [] parts2 = athlete2.skiTimeResult.split(":");
+        String [] parts1 = athlete1.getFinalResults().split(":");
+        String [] parts2 = athlete2.getFinalResults().split(":");
         int minutes1 = Integer.parseInt(parts1 [0]);
         int seconds1 = Integer.parseInt(parts1 [1]);
         int minutes2 = Integer.parseInt(parts2 [0]);

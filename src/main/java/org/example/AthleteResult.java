@@ -65,4 +65,9 @@ public class AthleteResult {
         }
         return finalResult;
     }
+
+    @Override
+    public String toString() {
+        return athleteName + " " + getFinalResults() + " (" + skiTimeResult + " + " + getPenaltyTime() + ")";
+    }
 }
