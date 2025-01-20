@@ -4,6 +4,9 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * This class is a mock of the CSV parser which helps to use a string instead of a file.
+ */
 public class CSVParserMock {
     public List<AthleteResult> parse(String filecontent) {
         String line;

@@ -4,6 +4,9 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * This class is created to define the parse method of CSV file, containing the results our application.
+ */
 public class CSVParser {
     public List<AthleteResult> parse(File file) {
         String line;

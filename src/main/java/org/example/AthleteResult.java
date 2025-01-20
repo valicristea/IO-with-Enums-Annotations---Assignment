@@ -29,7 +29,12 @@ public class AthleteResult {
         this.thirdShootingRange = thirdShootingRange;
     }
 
-    long getPenaltyTime(){
+    /**
+     * This method calculates the penalty time based on the range shoot.
+     *
+     * @return Penalty Time
+     */
+    long getPenaltyTime() {
         long penaltyPoints = firstShootingRange.chars().filter(ch -> ch == 'o').count();
         penaltyPoints += secondShootingRange.chars().filter(ch -> ch == 'o').count();
         penaltyPoints += thirdShootingRange.chars().filter(ch -> ch == 'o').count();
@@ -37,6 +42,11 @@ public class AthleteResult {
         return penaltyPoints * 10;
     }
 
+    /**
+     * This method calculates the final results based on ski time results + penalty time.
+     *
+     * @return Final time
+     */
     public String getFinalResults() {
 
         List<String> resultTime = List.of(skiTimeResult.split(":"));
